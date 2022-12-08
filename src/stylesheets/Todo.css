@@ -1,0 +1,4 @@
+.wholeListItem {
+  display: flex;
+  flex-direction: row;
+}
