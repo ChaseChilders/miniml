@@ -1,4 +1,235 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.todoContainer {
+  background-color: white;
+  width: 500px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.42);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.42);
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+  border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.todoForm {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.todoInputBar {
+  height: 30px;
+  width: 375px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-color: rgba(128, 128, 128, 0.227);
+  font-size: 20px;
+}
+
+.todoInputBar:focus {
+  outline: none;
+}
+
+.todoAddButton {
+  height: 35px;
+  width: 40px;
+  text-align: center;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: rgba(128, 128, 128, 0.227);
+}
+
+.todoAddButton:hover {
+  background-color: rgba(128, 128, 128, 0.769);
+}
+
+.todoList {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
+.todoItem {
+  font-size: 20px;
+}
+
 .wholeListItem {
   display: flex;
   flex-direction: row;
+  font: size 20px;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+.todoItemButtonsContainer {
+  display: flex;
+}
+
+.editContainer {
+}
+.todoEditInputBar {
+  height: 30px;
+  width: 250px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  border-color: rgba(128, 128, 128, 0.227);
+  font-size: 20px;
+}
+
+.todoEditInputBar:focus {
+  outline: none;
+}
+
+.todoCompleteButton,
+.todoDeleteButton,
+.todoEditButton,
+.todoEditSubmitButton {
+  height: 35px;
+  width: 40px;
+  text-align: center;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: rgba(128, 128, 128, 0.227);
+  margin-left: 1px;
+}
+
+.todoCompleteButton:hover,
+.todoDeleteButton:hover,
+.todoEditButton:hover,
+.todoEditSubmitButton:hover {
+  background-color: rgba(128, 128, 128, 0.769);
 }

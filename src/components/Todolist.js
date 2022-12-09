@@ -20,6 +20,7 @@ function Todolist() {
     }
     const newTodos = [...todoList, { id: uuidv4(), todoText: todoText, isDone: false }];
     setTodoList(newTodos);
+    setTodoText("");
     console.log(todoList);
   }
   function removeTodo(id) {
@@ -40,10 +41,6 @@ function Todolist() {
   }
   function editTodo(id) {
     const updatedTodos = [...todoList].map((todo) => {
-      if (editingText === "") {
-        alert("Please enter editing text");
-        return;
-      }
       if (todo.id === id) {
         todo.todoText = editingText;
       }
@@ -55,13 +52,20 @@ function Todolist() {
   }
   return (
     <div className="todoContainer">
-      <div className="todoTitle">Chase's Todo List</div>
+      {/* <div className="todoTitle">Chase's Todo List</div> */}
       <div className="todoForm">
         <form>
-          <label className="todoInputLabel">Type Todo:</label>
-          <input type="text" for="todoText" className="todoInputBar" onChange={inputTextHandler} setTodoText={setTodoText}></input>
+          {/* <label className="todoInputLabel">Type Todo:</label> */}
+          <input
+            type="text"
+            for="todoText"
+            className="todoInputBar"
+            onChange={inputTextHandler}
+            todoText={todoText}
+            placeholder="Please Enter a Todo"
+          ></input>
           <button className="todoAddButton" onClick={addTodo}>
-            <GrAdd></GrAdd>
+            <GrAdd className="addIcon"></GrAdd>
           </button>
         </form>
       </div>
@@ -74,15 +78,17 @@ function Todolist() {
                   {todo.todoText}
                 </li>
                 {todoEditing === todo.id ? (
-                  <div>
-                    <input type="text" onChange={(e) => setEditingText(e.target.value)} value={editingText}></input>
-                    <button onClick={() => editTodo(todo.id)}>Submit Edits</button>
+                  <div className="editContainer">
+                    <input type="text" onChange={(e) => setEditingText(e.target.value)} value={editingText} className="todoEditInputBar"></input>
+                    <button onClick={() => editTodo(todo.id)} className="todoEditSubmitButton">
+                      <GrCheckmark></GrCheckmark>
+                    </button>
                   </div>
                 ) : (
                   todo.text
                 )}
               </div>
-              <div className="todoItemButtons">
+              <div className="todoItemButtonsContainer">
                 <button className="todoCompleteButton" onClick={() => completeTodo(todo.id)}>
                   <GrCheckmark></GrCheckmark>
                 </button>
