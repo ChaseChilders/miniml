@@ -62,7 +62,7 @@ function Todolist() {
             className="todoInputBar"
             onChange={inputTextHandler}
             todoText={todoText}
-            placeholder="Please Enter a Todo"
+            placeholder="Please Enter a To-do"
           ></input>
           <button className="todoAddButton" onClick={addTodo}>
             <GrAdd className="addIcon"></GrAdd>
